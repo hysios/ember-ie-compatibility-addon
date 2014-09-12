@@ -2,6 +2,7 @@
 
 var path    = require('path'),
     fs      = require('fs'),
+    mergeTrees = require('broccoli-merge-trees'),
     merge   = require('lodash-node/modern/objects/merge'),
     defaults = require('lodash-node/modern/objects/defaults');
 
@@ -24,7 +25,7 @@ EmberIECompatibility.prototype.treeFor = function treeFor(name) {
   if (fs.existsSync(treePath)) {
     if (name === 'vendor') {
       var html5shivPath = path.join('node_modules', 'ember-ie-compatibility-addon', 'bower_components/html5shiv');
-      return mergeTree(treePath, html5shivPath);
+      return mergeTrees(treePath, html5shivPath);
     } else {
       return unwatchedTree(treePath);
     }
