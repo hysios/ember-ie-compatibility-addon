@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>EmberIe8Addon</title>
+    <title>EmberIeCompatiibilityAddon</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/ember-ie8-addon.css">
+    <link rel="stylesheet" href="assets/ember-ie-compatiibility-addon.css">
   </head>
   <body>
     <script>
-      window.EmberIe8AddonENV = {{ENV}};
-      window.EmberENV = window.EmberIe8AddonENV.EmberENV;
+      window.EmberIeCompatiibilityAddonENV = {{ENV}};
+      window.EmberENV = window.EmberIeCompatiibilityAddonENV.EmberENV;
     </script>
     <script src="assets/vendor.js"></script>
-    <script src="assets/ember-ie8-addon.js"></script>
+    <script src="assets/ember-ie-compatiibility-addon.js"></script>
     <script>
-      window.EmberIe8Addon = require('ember-ie8-addon/app')['default'].create(EmberIe8AddonENV.APP);
+      window.EmberIeCompatiibilityAddon = require('ember-ie-compatiibility-addon/app')['default'].create(EmberIeCompatiibilityAddonENV.APP);
     </script>
   </body>
 </html>

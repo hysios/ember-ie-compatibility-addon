@@ -1,7 +1,6 @@
 {
-  "name": "ember-ie8-addon",
+  "name": "ember-ie-compatiibility-addon",
   "version": "0.0.0",
-  "private": true,
   "directories": {
     "doc": "doc",
     "test": "test"
@@ -15,6 +14,13 @@
   "engines": {
     "node": ">= 0.10.0"
   },
+  "keywords": [
+    "ember-addon"
+  ],
+  "ember-addon": {
+    "configPath": "tests/dummy/config",
+    "main": "ie-compatibility.sj"
+  },
   "author": "",
   "license": "MIT",
   "devDependencies": {
@@ -23,10 +29,10 @@
     "broccoli-ember-hbs-template-compiler": "^1.6.1",
     "ember-cli": "0.0.41",
     "ember-cli-ember-data": "0.1.0",
-    "ember-cli-inject-live-reload": "^1.0.2",
     "ember-cli-ic-ajax": "0.1.1",
     "ember-cli-qunit": "0.0.5",
     "express": "^4.8.5",
-    "glob": "^4.0.5"
+    "glob": "^4.0.5",
+    "lodash-node": "^2.4.1"
   }
 }

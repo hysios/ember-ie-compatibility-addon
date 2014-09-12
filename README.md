@@ -1,6 +1,6 @@
-# Ember-ie8-addon
+# Ember-ie-compatiibility-addon
 
-This README outlines the details of collaborating on this Ember application.
+This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 

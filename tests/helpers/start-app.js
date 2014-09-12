@@ -1,7 +1,7 @@
 /* global require */
 
-var Application = require('ember-ie8-addon/app')['default'];
-var Router = require('ember-ie8-addon/router')['default'];
+var Application = require('dummy/app')['default'];
+var Router = require('dummy/router')['default'];
 import Ember from 'ember';
 
 export default function startApp(attrs) {
