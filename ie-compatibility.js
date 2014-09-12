@@ -22,7 +22,12 @@ EmberIECompatibility.prototype.treeFor = function treeFor(name) {
   var treePath =  path.join('node_modules', 'ember-ie-compatibility-addon', name);
 
   if (fs.existsSync(treePath)) {
-    return unwatchedTree(treePath);
+    if (name === 'vendor') {
+      var html5shivPath = path.join('node_modules', 'ember-ie-compatibility-addon', 'bower_components/html5shiv');
+      return mergeTree(treePath, html5shivPath);
+    } else {
+      return unwatchedTree(treePath);
+    }
   }
 };
 
@@ -30,6 +35,7 @@ EmberIECompatibility.prototype.included = function included(app) {
   this.app = app;
 
   this.app.legacyFilesToAppend.unshift('vendor/ember-es5-sham.js');
+  this.app.legacyFilesToAppend.unshift('dist/html5shiv.js');
 };
 
 module.exports = EmberIECompatibility;
