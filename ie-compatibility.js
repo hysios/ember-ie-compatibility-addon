@@ -18,6 +18,14 @@ function EmberIECompatibility(project) {
     this.name = 'Ember CLI older IE browser compatibility Addon';
 }
 
+EmberIECompatibility.prototype.treeFor = function treeFor(name) {
+  var treePath =  path.join(this.project.root, name);
+
+  if (fs.existsSync(treePath)) {
+    return unwatchedTree(treePath);
+  }
+};
+
 EmberIECompatibility.prototype.included = function included(app) {
   this.app = app;
 
