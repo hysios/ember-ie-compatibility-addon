@@ -29,10 +29,7 @@ EmberIECompatibility.prototype.treeFor = function treeFor(name) {
 EmberIECompatibility.prototype.included = function included(app) {
   this.app = app;
 
-  this.app.vendorFiles = merge({
-    'html5shiv.js': 'bower_components/html5shiv/dist/html5shiv.js',
-    'ember-es5-sham.js'  : 'vendor/ember-es5-sham.js',
-  }, defaults);
+  this.app.import('vendor/ember-es5-sham.js');
 };
 
 module.exports = EmberIECompatibility;
