@@ -20,7 +20,7 @@
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "main": "ie-compatibility.sj"
+    "main": "ie-compatibility.js"
   },
   "author": "",
   "license": "MIT",
@@ -34,6 +34,9 @@
     "ember-cli-qunit": "0.0.5",
     "express": "^4.8.5",
     "glob": "^4.0.5",
+    "lodash-node": "^2.4.1"
+  },
+  "dependencies": {
     "lodash-node": "^2.4.1"
   }
 }
