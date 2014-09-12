@@ -19,7 +19,7 @@ function EmberIECompatibility(project) {
 }
 
 EmberIECompatibility.prototype.treeFor = function treeFor(name) {
-  var treePath =  path.join(this.project.root, name);
+  var treePath =  path.join('node_modules', 'ember-ie-compatibility-addon', name);
 
   if (fs.existsSync(treePath)) {
     return unwatchedTree(treePath);
@@ -29,7 +29,7 @@ EmberIECompatibility.prototype.treeFor = function treeFor(name) {
 EmberIECompatibility.prototype.included = function included(app) {
   this.app = app;
 
-  this.app.import('vendor/ember-es5-sham.js');
+  this.app.legacyFilesToAppend.unshift('vendor/ember-es5-sham.js');
 };
 
 module.exports = EmberIECompatibility;
